@@ -95,7 +95,7 @@ func AssetGeneration(asset Asset, pdfname string) {
 
 func main() {
 	comic := Asset{
-		URL:         `https://cdn-l-cyberpunk.cdprojektred.com/comicbook/assets/%s/pages/page-%d.jpg`,
+		URL:         `https://cdn-l-cyberpunk.cdprojektred.com/comicbook/assets-99pDTTxHXq2GD68d/%s/pages/page-%d.jpg`,
 		Pages:       82,
 		Lang:        "de",
 		PDFSize:     "A5",
@@ -103,7 +103,7 @@ func main() {
 	}
 
 	artbook := Asset{
-		URL:         `https://cdn-l-cyberpunk.cdprojektred.com/artbook/assets/%s/pages/page-%d.jpg`,
+		URL:         `https://cdn-l-cyberpunk.cdprojektred.com/artbook/assets-99pDTTxHXq2GD68d/%s/pages/page-%d.jpg`,
 		Pages:       60,
 		Lang:        "de",
 		PDFSize:     "A4",
