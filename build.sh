@@ -1,28 +1,32 @@
 function clean {
-    rm -rf Windows-*
-    rm -rf Linux-*
-    rm -rf Darwin-*
+    rm -rf build
 }
 
 clean
 
-mkdir Windows-x64
-env GOOS=windows GOARCH=amd64 go build -v -o ./Windows-x64 .
-mkdir Windows-x32
-env GOOS=windows GOARCH=386 go build -v -o ./Windows-x32 .
+mkdir build
 
-mkdir Linux-x64
-env GOOS=linux GOARCH=amd64 go build -o ./Linux-x64 -v .
-mkdir Linux-x32
-env GOOS=linux GOARCH=386 go build -o ./Linux-x32 -v .
+mkdir build/Windows-x64
+env GOOS=windows GOARCH=amd64 go build -ldflags="-s -w" -v -o ./build/Windows-x64 .
 
-mkdir Darwin-x64
-env GOOS=darwin GOARCH=amd64 go build -o ./Darwin-x64 -v .
+mkdir build/Windows-x32
+env GOOS=windows GOARCH=386 go build -ldflags="-s -w" -v -o ./build/Windows-x32 .
 
-zip -r Windows-x64.zip Windows-x64
-zip -r Windows-x32.zip Windows-x32
+mkdir build/Linux-x64
+env GOOS=linux GOARCH=amd64 go build -ldflags="-s -w" -v -o ./build/Linux-x64 .
 
-zip -r Linux-x64.zip Linux-x64
-zip -r Linux-x32.zip Linux-x32
+mkdir build/Linux-x32
+env GOOS=linux GOARCH=386 go build -ldflags="-s -w" -v -o ./build/Linux-x32 .
 
-zip -r Darwin-x64.zip Darwin-x64
+mkdir build/Darwin-x64
+env GOOS=darwin GOARCH=amd64 go build -ldflags="-s -w" -v -o ./build/Darwin-x64 .
+
+zip -r build/Windows-x64.zip build/Windows-x64
+
+zip -r build/Windows-x32.zip build/Windows-x32
+
+zip -r build/Linux-x64.zip build/Linux-x64
+
+zip -r build/Linux-x32.zip build/Linux-x32
+
+zip -r build/Darwin-x64.zip build/Darwin-x64
