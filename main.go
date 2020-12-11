@@ -60,7 +60,10 @@ func AssetGeneration(asset Asset, pdfname string) {
 			log.Fatalln("Decode: ", err)
 		}
 
-		out, _ := os.Create(fmt.Sprintf("./images/page-%d.jpeg", i+1))
+		out, err := os.Create(fmt.Sprintf("./images/page-%d.jpeg", i+1))
+		if err != nil {
+			panic(err)
+		}
 		defer out.Close()
 
 		err = jpeg.Encode(out, img, nil)
