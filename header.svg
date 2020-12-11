@@ -1,0 +1,139 @@
+<svg fill="none" viewBox="0 0 800 400" width="800" height="400" xmlns="http://www.w3.org/2000/svg">
+  <foreignObject width="100%" height="100%">
+    <div xmlns="http://www.w3.org/1999/xhtml">
+      <style>
+       
+
+        :root {
+          --yellow-color: #fcee09;
+          --red-color: #ff003c;
+          --black-color: #050a0e;
+          --blue-color: #00f0ff;
+        }
+
+        @keyframes fadeIn {
+          0% {
+            opacity: 0;
+          }
+
+          66% {
+            opacity: 0;
+          }
+
+          100% {
+            opacity: 1;
+          }
+        }
+
+        @keyframes shake-animation {
+          0% {
+            transform: translate(0, 0)
+          }
+
+          1.78571% {
+            transform: translate(5px, 0)
+          }
+
+          3.57143% {
+            transform: translate(0, 0)
+          }
+
+          5.35714% {
+            transform: translate(5px, 0)
+          }
+
+          7.14286% {
+            transform: translate(0, 0)
+          }
+
+          8.92857% {
+            transform: translate(5px, 0)
+          }
+
+          10.71429% {
+            transform: translate(0, 0)
+          }
+
+          100% {
+            transform: translate(0, 0)
+          }
+        }
+
+        .container {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+          margin: 0;
+          width: 100%;
+          height: 400px;
+          background: var(--yellow-color);
+          background-size: 600% 400%;
+        }
+
+        span {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          border: 2px solid var(--black-color);
+          outline: none;
+          background-color: var(--yellow-color);
+          color: var(--black-color);
+          cursor: pointer;
+          padding: 20px 25px;
+          position: relative;
+          font-family: Tomorrow, sans-serif;
+          font-size: 2.85rem;
+          text-transform: uppercase;
+          animation: shake-animation 2.72s ease infinite;
+        }
+
+        span::before {
+          content: "";
+          width: 24px;
+          height: 24px;
+          position: absolute;
+          bottom: -14px;
+          left: -13px;
+          background-color: var(--yellow-color);
+          border-top: 2px solid var(--black-color);
+          transform: rotate(45deg);
+        }
+
+        span::after {
+          content: "";
+          width: 24px;
+          height: 24px;
+          position: absolute;
+          top: -14px;
+          right: -13px;
+          background-color: var(--yellow-color);
+          border-bottom: 2px solid var(--black-color);
+          transform: rotate(45deg);
+        }
+
+        p {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          border: 2px solid var(--black-color);
+          outline: none;
+          background-color: var(--yellow-color);
+          color: var(--black-color);
+          cursor: pointer;
+          padding: 20px 25px;
+          position: relative;
+          font-family: Tomorrow, sans-serif;
+          font-size: 1.85rem;
+          text-transform: uppercase;
+          animation: 5s ease 0s normal forwards 1 fadeIn;
+        }
+
+      </style>
+      <div class="container">
+        <span>cyberpunk-goodies</span>
+        <p>Generate pdf's via the cyberpunk cdn</p>
+      </div>
+    </div>
+  </foreignObject>
+</svg>
