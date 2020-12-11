@@ -15,3 +15,7 @@
 # vendor/
 
 build/
+
+images/
+artbook.pdf
+comic.pdf
