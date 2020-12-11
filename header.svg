@@ -126,7 +126,7 @@
           font-family: Tomorrow, sans-serif;
           font-size: 1.85rem;
           text-transform: uppercase;
-          animation: 5s ease 0s normal forwards 1 fadeIn;
+          animation: 1s ease 0s normal forwards 1 fadeIn;
         }
 
       </style>
