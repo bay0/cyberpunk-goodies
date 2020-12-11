@@ -41,7 +41,11 @@ func AssetGeneration(asset Asset, pdfname string) {
 	if err != nil {
 		log.Println(err)
 	}
-	os.Mkdir("./images", os.FileMode(0522))
+
+	err = os.MkdirAll("./images", os.FileMode(0777))
+	if err != nil {
+		log.Println(err)
+	}
 
 	for i := 1; i < asset.Pages+1; i++ {
 		asset.Images = append(asset.Images, fmt.Sprintf(asset.URL, asset.Lang, i))
@@ -98,17 +102,17 @@ func AssetGeneration(asset Asset, pdfname string) {
 
 func main() {
 	comic := Asset{
-		URL:         `https://cdn-l-cyberpunk.cdprojektred.com/comicbook/assets-/%s/pages/page-%d.jpg`,
+		URL:         `https://cdn-l-cyberpunk.cdprojektred.com/comicbook/assets-99pDTTxHXq2GD68d/%s/pages/page-%d.jpg`,
 		Pages:       82,
-		Lang:        "de",
+		Lang:        "en",
 		PDFSize:     "A5",
 		Orientation: "P",
 	}
 
 	artbook := Asset{
-		URL:         `https://cdn-l-cyberpunk.cdprojektred.com/artbook/assets-/%s/pages/page-%d.jpg`,
+		URL:         `https://cdn-l-cyberpunk.cdprojektred.com/artbook/assets-99pDTTxHXq2GD68d/%s/pages/page-%d.jpg`,
 		Pages:       60,
-		Lang:        "de",
+		Lang:        "en",
 		PDFSize:     "A4",
 		Orientation: "L",
 	}
