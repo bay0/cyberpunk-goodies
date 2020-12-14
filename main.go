@@ -29,7 +29,7 @@ func main() {
 	comic := asset{
 		URL:         `https://cdn-l-cyberpunk.cdprojektred.com/comicbook/assets-99pDTTxHXq2GD68d/%s/pages/page-%d.jpg`,
 		Pages:       82,
-		Lang:        "kk",
+		Lang:        lang.String(),
 		PDFSize:     "A5",
 		Orientation: "P",
 	}
@@ -37,7 +37,7 @@ func main() {
 	artbook := asset{
 		URL:         `https://cdn-l-cyberpunk.cdprojektred.com/artbook/assets-99pDTTxHXq2GD68d/%s/pages/page-%d.jpg`,
 		Pages:       60,
-		Lang:        "kk",
+		Lang:        lang.String(),
 		PDFSize:     "A4",
 		Orientation: "L",
 	}
